@@ -1,4 +1,14 @@
 # Starter pipeline
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'CosmosDB-MT Ind(v-kislkumar)-Kislay Kumar Mishra(57b231b8-debe-4f58-baea-938abc0b2fa7)'
+    appType: 'webApp'
+    WebAppName: 'TestWebAppRepro'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'AppServices'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
